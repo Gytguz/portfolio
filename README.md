@@ -1,1 +1,1 @@
-First portfolio, updates incoming.
+Trying out things for my first portfolio.
