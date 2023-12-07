@@ -22,7 +22,9 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            vue: 'vue/dist/vue.esm-bundler.js',
+            '@components': '/resources/js/components',
+            '@layouts': '/resources/js/layouts',
+            '@pages': '/resources/js/pages'
         },
     },
 });
