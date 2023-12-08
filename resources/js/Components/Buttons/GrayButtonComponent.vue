@@ -25,10 +25,7 @@ import { Link } from '@inertiajs/inertia-vue3';
         computed: {
             classes() {
                 return `justify-center inline-flex items-center px-4 py-2 
-                bg-gray-800 border border-transparent rounded-md font-semibold
-                uppercase tracking-widest hover:bg-gray-900 
-                focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300
-                transition`
+                border border-transparent rounded-md tracking-widest transition`
             }
         }
     })
