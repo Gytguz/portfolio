@@ -8,8 +8,8 @@ use App\Http\Controllers\PagesController;
 Route::middleware(['guest'])->group(function () {
 
     // Pages
-    Route::get('/', [PagesController::class, 'homePage']);
-    Route::get('/contact', [PagesController::class, 'contactPage']);
-    Route::get('/hello-world', [PagesController::class, 'helloWorldPage']);
+    Route::get('/', [PagesController::class, 'homePage'])->name('homePage');
+    Route::get('/contact', [PagesController::class, 'contactPage'])->name('contactPage');
+    Route::get('/hello-world', [PagesController::class, 'helloWorldPage'])->name('helloWorldPage');
     
 });
