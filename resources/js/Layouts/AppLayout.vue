@@ -4,6 +4,7 @@
     </div>
     <NavbarComponent />
     <slot></slot>
+    <FooterComponent />
 </template>
 
 
@@ -11,7 +12,7 @@
 import { defineComponent } from 'vue';
 import { Head, Link } from "@inertiajs/inertia-vue3";
 import NavbarComponent from '@/Components/NavbarComponent.vue';
-
+import FooterComponent from '@/Components/FooterComponent.vue';
 
 export default defineComponent({
     props: {
@@ -21,7 +22,8 @@ export default defineComponent({
     components: {
     Head,
     Link,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
 }
 })
 
