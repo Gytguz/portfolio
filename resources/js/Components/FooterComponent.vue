@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-stone-200">
+    <div class="bg-stone-200 ">
       <div class="text-center text-stone-900 px-4 py-4">
         <p> {{ randomQuote }} </p>
       </div>

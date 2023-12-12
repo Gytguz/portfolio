@@ -3,7 +3,7 @@
         <Head :title="title" />
     </div>
     <NavbarComponent />
-        <slot></slot>
+    <slot></slot>
     <FooterComponent />
 </template>
 

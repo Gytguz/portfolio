@@ -19,7 +19,6 @@ const quotes = [
     "The only reason to build a website is to change someone. If you can't tell me the change and you can't tell me the someone, then you're wasting your time. - Seth Godin",
     "The power of a website comes from the people using it, not the people making it. - Chris Edwards",
     "Your website is the center of your digital ecosystem, like a brick and mortar location, the experience matters once a customer enters, just as much as the perception they have of you before they walk through the door. - Leland Dieno",
-    "The objective of a website is to bring a visitor who brings another visitor. - Amit Kalantri",
     "Today it's not about, 'Get the Traffic,' it's about 'Get the targeted and relevant traffic.' - Adam Audette",
     "Web design is not just about creating pretty layouts. It's about understanding the marketing challenge behind your business. - Mohamed Saad",
     "A website should be designed such that a visitor should go to the cart with confidence and not to your contact page with confusion. - Amit Kalantri",
