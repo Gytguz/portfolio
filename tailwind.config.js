@@ -16,11 +16,15 @@ module.exports = {
     colors: {
       ...colors,
 
-},
+    },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
+    fontSize: {
+      xxs: '0.625rem',
+    },
+
     extend: {
       spacing: {
         '128': '32rem',
