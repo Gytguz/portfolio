@@ -3,7 +3,7 @@
     <div class="container mx-auto px-6 py-3">
       <div class="flex justify-between items-center">
         <div>
-          <Link :href="route('homePage')" class="hover:text-stone-500">E Shop</Link>
+          <a href="#"></a>
         </div>
         <div>
           <BurgerComponent :items="burgerData"/>

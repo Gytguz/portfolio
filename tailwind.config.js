@@ -32,7 +32,18 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
+      },
+      fontFamily: {
+        sans: ['Muli', 'sans-serif'],
+      },
+      fontWeight: {
+        'light': 100,
+        'normal': 400,
+        'medium': 500,
+        'semibold': 600,
+        'bold': 700,
+        'extrabold': 800,
+      },
     }
   },
   plugins: [],
