@@ -2,6 +2,7 @@
     <div>
         <Head :title="title" />
     </div>
+    <HeaderTopComponent />
     <NavbarComponent />
     <slot></slot>
     <FooterComponent />
@@ -13,6 +14,7 @@ import { defineComponent } from 'vue';
 import { Head, Link } from "@inertiajs/inertia-vue3";
 import NavbarComponent from '@/Components/NavbarComponent.vue';
 import FooterComponent from '@/Components/FooterComponent.vue';
+import HeaderTopComponent from '@/Components/HeaderTopComponent.vue';
 
 export default defineComponent({
     props: {
@@ -24,6 +26,7 @@ export default defineComponent({
     Link,
     NavbarComponent,
     FooterComponent,
+    HeaderTopComponent
 }
 })
 
