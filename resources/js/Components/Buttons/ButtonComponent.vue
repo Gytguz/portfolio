@@ -1,9 +1,9 @@
 <template>
     <Link :href="href" :class="classes" v-if="as === 'href'">
-    <slot></slot>
+        <slot></slot>
     </Link>
     <button :class="classes" v-else>
-    <slot></slot>
+        <slot></slot>
     </button>
 </template>
 
@@ -25,7 +25,7 @@ import { Link } from '@inertiajs/inertia-vue3';
         computed: {
             classes() {
                 return `justify-center inline-flex items-center px-4 py-2 
-                border border-transparent rounded-md tracking-widest transition`
+                border border-transparent rounded-md tracking-widest transition bg-orange-400 text-zinc-800`
             }
         }
     })

@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-stone-200">
-    <div class="container mx-auto px-6 py-3">
+  <div class="bg-zinc-800">
+    <div class="container mx-auto px-6">
       <div class="flex justify-between items-center">
         <div>
-          <a href="#"></a>
+          <a href="#" class="text-orange-400 hover:text-orange-300 font-bold">E shop</a>
         </div>
         <div>
           <BurgerComponent :items="burgerData"/>

@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-stone-200 ">
-      <div class="text-center text-stone-900 px-4 py-4">
+    <div class="bg-zinc-800 flex justify-center">
+      <div class="container text-center text-orange-400 font-semibold px-4 py-4">
         <p> {{ randomQuote }} </p>
       </div>
     </div>
