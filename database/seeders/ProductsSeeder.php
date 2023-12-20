@@ -15,14 +15,14 @@ class ProductsSeeder extends Seeder
      */
     public function run() {
         // WOMENS
-        for ($i=1; $i <= 12; $i++) {
+        for ($i = 1; $i <= 6; $i++) {
             $category = Categories::find(1);
             $product = Products::create([
                 'name' => 'Womens '.$i,
                 'slug' => 'women-'.$i,
                 'details' => 'women\'s hoodie',
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                'image' => 'images/products/main_image/womens-'.$i.'.png',
+                'image' => '/storage/images/products/'.$category->slug.'/'.$category->name.'-hoodie-'.$i.'.webp',
                 'product_code' => $category->category_code.'-00'.$i,
                 'price' => rand(99, 999),
                 'quantity' => rand(1,10),
@@ -43,14 +43,14 @@ class ProductsSeeder extends Seeder
         // $product->categories()->attach(3);
 
         // MENS
-        for ($i=1; $i <= 12; $i++) {
+        for ($i = 1; $i <= 6; $i++) {
             $category = Categories::find(2);
             Products::create([
                 'name' => 'Mens '.$i,
                 'slug' => 'mens-'.$i,
                 'details' => 'men\'s hoodie',
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                'image' => 'images/products/main_image/mens-'.$i.'.png',
+                'image' => '/storage/images/products/'.$category->slug.'/'.$category->name.'-hoodie-'.$i.'.webp',
                 'product_code' => $category->category_code.'-00'.$i,
                 'price' => rand(99, 999),
                 'quantity' => rand(1,10),
@@ -58,14 +58,14 @@ class ProductsSeeder extends Seeder
         }
 
         // Kids
-        for ($i=1; $i <= 12; $i++) {
+        for ($i = 1; $i <= 6; $i++) {
             $category = Categories::find(3);
             Products::create([
                 'name' => 'Kids '.$i,
                 'slug' => 'kids-'.$i,
                 'details' => 'kid\'s hoodie',
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                'image' => 'images/products/main_image/kids-'.$i.'.png',
+                'image' => '/storage/images/products/'.$category->slug.'/'.$category->name.'-hoodie-'.$i.'.webp',
                 'product_code' => $category->category_code.'-00'.$i,
                 'price' => rand(99, 999),
                 'quantity' => rand(1,10),
