@@ -28,6 +28,8 @@ class ProductsSeeder extends Seeder
                 'quantity' => rand(1,10),
             ])->categories()->attach($category);
         }
+                $product = Products::find(3);
+                $product->categories()->attach(2);
 
         // $product = Products::find(2);
         // $product->update([

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Products;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Products;
+use App\Models\Categories;
+use Illuminate\Http\Request;
 
 
 class PagesController extends Controller
@@ -16,8 +17,10 @@ class PagesController extends Controller
 
     public function homePage() {
         $products = Products::all();
+        $categories = Categories::all();
         return Inertia::render('Home', [
             'products' => $products,
+            'categories' => $categories,
         ]);
     }
 
