@@ -1,7 +1,7 @@
 <template>
-    <Link :href="href" :class="classes" v-if="as === 'href'">
+    <a :href="href" :class="classes" v-if="as === 'href'">
         <slot></slot>
-    </Link>
+    </a>
     <button :class="classes" v-else>
         <slot></slot>
     </button>

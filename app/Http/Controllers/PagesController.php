@@ -10,13 +10,8 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    // public function homePage() {
-    //     $products = Products::all();
-    //     return view('pages.home', compact('products'));
-    // }
-
     public function homePage() {
-        $products = Products::all();
+        $products = Products::inRandomOrder()->get();
         $categories = Categories::all();
         return Inertia::render('Home', [
             'products' => $products,
@@ -24,14 +19,16 @@ class PagesController extends Controller
         ]);
     }
 
-    public function contactPage() {
-        return view('pages.contact');
+    public function shopPage() {
+        $products = Products::inRandomOrder()->get();
+        $categories = Categories::all();
+        return Inertia::render('Shop/Index', [
+            'products' => $products,
+            'categories' => $categories,
+        ]);
     }
 
-    public function helloWorldPage() {
-        $products = Products::all();
-        return Inertia::render('HelloWorld', [
-            'products' => $products,
-        ]);
+    public function contactPage() {
+        return view('pages.contact');
     }
 }
