@@ -9,7 +9,7 @@ Route::middleware(['guest'])->group(function () {
 
     // Pages
     Route::get('/', [PagesController::class, 'homePage'])->name('homePage');
+    Route::get('/shop', [PagesController::class, 'shopPage'])->name('shopPage');
     Route::get('/contact', [PagesController::class, 'contactPage'])->name('contactPage');
-    Route::get('/hello-world', [PagesController::class, 'helloWorldPage'])->name('helloWorldPage');
     
 });

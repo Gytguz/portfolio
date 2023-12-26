@@ -24,7 +24,7 @@ class ProductsSeeder extends Seeder
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                 'image' => '/storage/images/products/'.$category->slug.'/'.$category->name.'-hoodie-'.$i.'.webp',
                 'product_code' => $category->category_code.'-00'.$i,
-                'price' => rand(99, 999),
+                'price' => rand(10, 99),
                 'quantity' => rand(1,10),
             ])->categories()->attach($category);
         }
@@ -52,7 +52,7 @@ class ProductsSeeder extends Seeder
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                 'image' => '/storage/images/products/'.$category->slug.'/'.$category->name.'-hoodie-'.$i.'.webp',
                 'product_code' => $category->category_code.'-00'.$i,
-                'price' => rand(99, 999),
+                'price' => rand(10, 99),
                 'quantity' => rand(1,10),
             ])->categories()->attach($category);
         }
@@ -67,7 +67,7 @@ class ProductsSeeder extends Seeder
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                 'image' => '/storage/images/products/'.$category->slug.'/'.$category->name.'-hoodie-'.$i.'.webp',
                 'product_code' => $category->category_code.'-00'.$i,
-                'price' => rand(99, 999),
+                'price' => rand(10, 99),
                 'quantity' => rand(1,10),
             ])->categories()->attach($category);
         }
