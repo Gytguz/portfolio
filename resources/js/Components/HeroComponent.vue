@@ -18,24 +18,18 @@
   export default defineComponent({
   
     props: {
-      categories: Array,
+        categories: Array,
     },
   
     components: {
-      ButtonComponent,
-    },
-  
-    data() {
-      return {
-        queryString: "",
-      };
+        ButtonComponent,
     },
   
     methods: {
-      changeQueryString(category) {
-        this.queryString = `/shop?category=${category.slug}`;
-        return this.queryString;
-      },
+        changeQueryString(category) {
+            const queryString = `/shop?category=${category.slug}`;
+            return queryString;
+        },
     },
   });
   </script>
