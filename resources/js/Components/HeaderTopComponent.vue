@@ -5,7 +5,9 @@
                 <div class="px-2">
                     <Icons name="envelope" href="contact"/>
                 </div>
-                <div>gytguz@gmail.com</div>
+                <a href="contact">
+                    <div>gytguz@gmail.com</div>
+                </a>
             </div>
 
             <div class="flex flex-row w-1/2 sm:justify-center justify-end pr-4">
