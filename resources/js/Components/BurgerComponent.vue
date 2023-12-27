@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-end relative z-10">
+  <nav class="flex justify-end relative z-20">
     <div class="shadow items-center sm:hidden">
 <!-- Hamburger -->
       <button
