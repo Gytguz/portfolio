@@ -2,18 +2,22 @@
     <app-layout title="Shop">
         <Icons name="back" href="javascript:history.back()"/>
 
-        <div class="fixed top-1/2 transform -translate-y-1/2 ml-6">
-            <div class="flex flex-col items-center justify-center space-y-4">
-                <Link :href="route('shopPage', { category: category.slug })" class="w-full py-4 sm:py-4" v-for="(category, id) in categories" :key="id">
+        <div class="sm:fixed sm:top-1/2 pt-10 sm:pt-0 px-5 sm:px-0 top-1 transform sm:-translate-y-1/2 sm:-translate-x-0 -translate-x-1 sm:ml-6 z-10">
+            <div class="flex flex-row sm:flex-col items-center justify-center sm:space-y-4 space-x-4 sm:space-x-0">
+                <Link :href="route('shopPage', { category: category.slug })" class="w-full text-xs py-4 justify-center inline-flex items-center px-2 
+                border border-transparent rounded-md tracking-widest transition bg-orange-400 text-zinc-800
+                hover:text-zinc-500" v-for="(category, id) in categories" :key="id">
                     {{ category.name }}
                 </Link>
             </div>
         </div>
 
-        <ProductCardComponent v-if="products.length>0" :products="products"/>
-            <div v-else>
-                <p class="bg-red-500 p-4">You have no products in your database. Check if it's properly connected and if so in your terminal run: <br><br> php artisan migrate <br>php artisan db:seed</p>
-            </div>
+        <div class="sm:ml-28">
+            <ProductCardComponent v-if="products.length>0" :products="products"/>
+                <div v-else>
+                    <p class="bg-red-500 p-4">You have no products in your database. Check if it's properly connected and if so in your terminal run: <br><br> php artisan migrate <br>php artisan db:seed</p>
+                </div>
+        </div>
 
     </app-layout>
 </template>
