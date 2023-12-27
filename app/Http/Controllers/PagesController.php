@@ -29,14 +29,17 @@ class PagesController extends Controller
             $products = Products::whereHas('categories', function ($query) use ($selectedCategory) {
                 $query->where('slug', $selectedCategory);
             })->inRandomOrder()->get();
+
         } else {
             // If no category is selected, get all products
             $products = Products::inRandomOrder()->get();
+            $selectedCategory = 'All';
         }
 
         return Inertia::render('Shop/Index', [
             'products' => $products,
             'categories' => $categories,
+            'selectedCategory' => $selectedCategory,
         ]);
     }
 
