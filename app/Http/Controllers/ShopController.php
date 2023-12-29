@@ -36,10 +36,15 @@ class ShopController extends Controller
     public function productPage($id) {
         $product = Products::find($id);
         $categories = $product->categories;
+        $categoryIds = $categories->pluck('id')->toArray();
+        $similarProducts = Products::whereHas('categories', function ($query) use ($categoryIds) {
+            $query->whereIn('categories.id', $categoryIds);
+        })->where('products.id', '!=', $id)->inRandomOrder()->take(4)->get();
 
         return Inertia::render('Shop/Product', [
             'product' => $product,
             'categories' => $categories,
+            'similarProducts' => $similarProducts,
         ]);
     }
 }
