@@ -4,10 +4,9 @@
     </div>
     <HeaderTopComponent />
     <NavbarComponent />
-    <slot></slot>
+        <slot></slot>
     <FooterComponent />
 </template>
-
 
 <script>
 import { defineComponent } from 'vue';
@@ -19,15 +18,17 @@ import HeaderTopComponent from '@/Components/HeaderTopComponent.vue';
 export default defineComponent({
     props: {
         title: String,
+        selectedCategory: String,
     },
 
     components: {
-    Head,
-    Link,
-    NavbarComponent,
-    FooterComponent,
-    HeaderTopComponent
-}
+        Head,
+        Link,
+        NavbarComponent,
+        FooterComponent,
+        HeaderTopComponent,
+
+    },
 })
 
 </script>
