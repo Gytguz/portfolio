@@ -32,4 +32,14 @@ class ShopController extends Controller
             'selectedCategory' => $selectedCategory,
         ]);
     }
+
+    public function productPage($id) {
+        $product = Products::find($id);
+        $categories = $product->categories;
+
+        return Inertia::render('Shop/Product', [
+            'product' => $product,
+            'categories' => $categories,
+        ]);
+    }
 }
