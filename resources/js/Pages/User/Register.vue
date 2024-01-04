@@ -14,11 +14,12 @@
                       </div>
                       <div>
                           <label for="email" class="block mb-2 text-sm font-medium text-orange-400">Your email</label>
-                          <input type="email" name="email" id="email" v-model="form.email" autocomplete="new-password" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-zinc-700 border-gray-600 placeholder-orange-200 text-orange-400 focus:ring-blue-500 focus:border-blue-500" placeholder="name@company.com" required="">
+                          <input type="email" name="email" id="email" v-model="form.email" autocomplete="new-password" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-zinc-700 border-gray-600 placeholder-orange-200 text-orange-400 focus:ring-blue-500 focus:border-blue-500" placeholder="name@example.com" required="">
                       </div>
                       <div>
                           <label for="password" class="block mb-2 text-sm font-medium text-orange-400">Password</label>
                           <input type="password" name="password" id="password" v-model="form.password" placeholder="••••••••" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-zinc-700 border-gray-600 placeholder-orange-200 text-orange-400 focus:ring-blue-500 focus:border-blue-500" required="">
+                          <label v-if="form.password.length < 6 && form.password.length > 0" class="text-sm text-red-500">Password must contain atleast 6 symbols</label>
                       </div>
                       <div>
                           <label for="confirm-password" class="block mb-2 text-sm font-medium text-orange-400">Confirm password</label>
@@ -59,6 +60,7 @@ export default{
           }
           await form.post(route('registerStore'));
         };
+        
         return { form, submit };
     },
     components: { AppLayout },

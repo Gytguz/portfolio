@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function registerPage() {
-        return Inertia::render('User/Register', [
-            'users' => User::all(),
-          ]);
+        return Inertia::render('User/Register');
     }
 
     public function registerStore(Request $request)
@@ -19,7 +17,7 @@ class UserController extends Controller
         User::create($request->validate([
           'name' => ['required', 'max:50'],
           'email' => ['required', 'max:50', 'email'],
-          'password' => ['required', 'max:50'],
+          'password' => ['required', 'alpha_num:ascii' ,'min:6', 'max:50'],
         ]));
 
         return redirect()->route('homePage');
