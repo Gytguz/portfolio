@@ -12,7 +12,7 @@
                 class="w-full text-xs py-4 justify-center inline-flex items-center px-2 
                 border border-transparent rounded-md tracking-widest transition bg-orange-400 text-zinc-800
                 hover:text-zinc-500"
-                :class="route().current('shopPage', { category: category.slug }) ? 'text-yellow-300 bg-zinc-800' : 'text-zinc-800'"
+                :class="route().current('shopPage', { category: category.slug }) ? 'text-orange-200 bg-zinc-800' : 'text-zinc-800'"
                 v-for="(category, id) in categories" :key="id">
                     {{ category.name }}
                 </Link>
@@ -44,11 +44,11 @@ export default defineComponent({
         selectedCategory: String,
     },
         components: {
-    AppLayout,
-    ProductCardComponent,
-    Icons,
-    Link,
-    HeaderBotComponent
-},
+            AppLayout,
+            ProductCardComponent,
+            Icons,
+            Link,
+            HeaderBotComponent
+        },
 });
 </script>
