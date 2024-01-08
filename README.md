@@ -17,7 +17,7 @@ Simple eCommerce site.
 
 ## How To Run This Project
 
-1.  Run git clone https://github.com/Gytguz/portfolio.git
+1.  Run ```git clone https://github.com/Gytguz/portfolio.git```
 2.  Run composer install
 3.  Run cp .env.example .env
 4.  Run php artisan key:generate
