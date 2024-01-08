@@ -10,7 +10,7 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { Head, Link } from "@inertiajs/inertia-vue3";
+import { Head, Link } from "@inertiajs/vue3";
 import NavbarComponent from '@/Components/NavbarComponent.vue';
 import FooterComponent from '@/Components/FooterComponent.vue';
 import HeaderTopComponent from '@/Components/HeaderTopComponent.vue';
