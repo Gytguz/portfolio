@@ -2,18 +2,18 @@
 
 ## About This Project
 
-Simple eCommerce site.
+Simple eCommerce site. Please note that this is an ongoing project and it's yet to be finished. Some functionallity is still missing and I'm still working on it.
 
 ## Stack Being Used
 
 - **Laravel 10.x** - backend 
 - **Inertia (Vue3)** - frontend
 - **Tailwind** - css
-- **Mailtrap** - mailing
-- **Laravel Cashier** - php side of payments
-- **Stripe** - frontend side of paymets
-- **Laravel Invoices** - invoices
-- **Laravel Shopping Cart** - shopping cart
+- **Mailtrap** - mailing (not implemented yet)
+- **Laravel Cashier** - php side of payments (not implemented yet)
+- **Stripe** - frontend side of paymets (not implemented yet)
+- **Laravel Invoices** - invoices (not implemented yet)
+- **Laravel Shopping Cart** - shopping cart (not implemented yet)
 
 ## How To Run This Project
 
