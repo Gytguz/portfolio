@@ -14,33 +14,13 @@
 </template>
 
 
-<script>
-import { defineComponent } from 'vue';
-import { Link } from '@inertiajs/vue3';
-import BurgerComponent from '@/Components/BurgerComponent.vue';
-
-export default defineComponent({
-    components: {
-        Link,
-        BurgerComponent,
-    },
-
-    setup(){
-      let burgerData = [
+<script setup>
+  import BurgerComponent from '@/Components/BurgerComponent.vue';
+  
+  let burgerData = [
         {title:"Register", link:"/register"},
         {title:"Login", link:"/login"},
         {title:"Shop", link:"/shop"},
-        ]
+      ]
 
-        return { burgerData }
-    },
-
-
-    methods: {
-        logout() {
-            this.$inertia.post(route('logout'));
-        },
-    }
-
-});
 </script>

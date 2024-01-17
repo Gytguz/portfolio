@@ -56,19 +56,12 @@
   </nav>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
 
+<script setup>
+  import { ref } from 'vue';
 
-export default defineComponent({
-    props: [
-        'items',
-    ],
+  defineProps(['items'])
 
-    data() {
-        return {
-            showMenuDropdown: false,
-        }
-    },
-});
+  const showMenuDropdown = ref(false);
+
 </script>
