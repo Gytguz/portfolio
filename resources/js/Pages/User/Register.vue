@@ -38,31 +38,26 @@
   </app-layout>
 </template>
 
-<script>
-import { useForm } from '@inertiajs/vue3';
+<script setup>
+
+import { router, useForm } from '@inertiajs/vue3'
 import AppLayout from '@/Layouts/AppLayout.vue';
 
+defineProps({errors: Object})
 
+  const form = useForm({
+    name: null,
+    email: null,
+    password: '',
+    confirmPassword: '',
+    remember: false,
+  });
 
-
-export default{
-    setup() {
-        const form = useForm({
-            name: '',
-            email: '',
-            password: '',
-            confirmPassword: '',
-        });
-        
-        const submit = async () => {
-          if (form.password !== form.confirmPassword) {
+  const submit = async () => {
+        if (form.password !== form.confirmPassword) {
             return;
-          }
-          await form.post(route('registerStore'));
-        };
-        
-        return { form, submit };
-    },
-    components: { AppLayout },
-}
+            }
+        await router.post('/users/register', form)
+    };
+
 </script>

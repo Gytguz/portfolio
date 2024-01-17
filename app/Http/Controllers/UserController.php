@@ -45,7 +45,7 @@ class UserController extends Controller
 
       if(auth()->attempt($formFields)){
         $request->session()->regenerate();
-
+        
         return to_route('homePage');
       }
      }
