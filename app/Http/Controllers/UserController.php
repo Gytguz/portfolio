@@ -6,6 +6,7 @@ use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 
 class UserController extends Controller
@@ -33,7 +34,6 @@ class UserController extends Controller
 
     public function loginPage() {
       return Inertia::render('User/Login', [
-          'users' => User::all(),
         ]);
      }
 
@@ -49,4 +49,15 @@ class UserController extends Controller
         return to_route('homePage');
       }
      }
+
+     public function logout() {
+        auth()->logout();
+        return to_route('test');
+     }
+
+     public function test() {
+        $user = auth()->user();
+        return $user;
+     }
+
 }

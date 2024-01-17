@@ -17,6 +17,11 @@ use App\Http\Controllers\UserController;
     Route::get('/login', [UserController::class, 'loginPage'])->name('loginPage');
     Route::post('/users/register', [UserController::class, 'registerStore'])->name('registerStore');
     Route::post('/users/authenticate', [UserController::class, 'authenticate'])->name('authenticate');
+    Route::get('/users/logout', [UserController::class, 'logout'])->name('logout');
+
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/test', [UserController::class, 'test'])->name('test');
+    });
     // Route::get('/contact', [PagesController::class, 'contactPage'])->name('contactPage');
     
 // });
