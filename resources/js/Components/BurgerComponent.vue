@@ -60,7 +60,9 @@
 <script setup>
   import { ref } from 'vue';
 
-  defineProps(['items'])
+  defineProps({
+    items: Object,
+  })
 
   const showMenuDropdown = ref(false);
 

@@ -1,6 +1,6 @@
 <template>
   <app-layout :title="'Register'">
-    <section class="">
+    <section>
       <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-[75vh] sm:h-screen lg:py-0">
           <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-zinc-800 border-orange-700">
               <div class="p-6 space-y-4">
@@ -11,10 +11,12 @@
                       <div>
                           <label for="name" class="block mb-2 text-sm font-medium text-orange-400">Your name</label>
                           <input type="name" name="name" id="name" v-model="form.name" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-zinc-700 border-gray-600 placeholder-orange-200 text-orange-400 focus:ring-blue-500 focus:border-blue-500" placeholder="John" required="">
+                          <label v-if="errors.name" class="text-sm text-red-500"> {{ errors.name }} </label>
                       </div>
                       <div>
                           <label for="email" class="block mb-2 text-sm font-medium text-orange-400">Your email</label>
                           <input type="email" name="email" id="email" v-model="form.email" autocomplete="new-password" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-zinc-700 border-gray-600 placeholder-orange-200 text-orange-400 focus:ring-blue-500 focus:border-blue-500" placeholder="name@example.com" required="">
+                          <label v-if="errors.email" class="text-sm text-red-500"> {{ errors.email }} </label>
                       </div>
                       <div>
                           <label for="password" class="block mb-2 text-sm font-medium text-orange-400">Password</label>
@@ -50,7 +52,7 @@ defineProps({errors: Object})
     email: null,
     password: '',
     confirmPassword: '',
-    remember: false,
+    remember: true,
   });
 
   const submit = async () => {
