@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\Auth;
+
+
 
 
 class UserController extends Controller
@@ -15,13 +16,9 @@ class UserController extends Controller
         return Inertia::render('User/Register');
     }
 
-    public function registerStore(Request $request)
+    public function registerStore(RegisterRequest $request)
     {
-        $formFields = $request->validate([
-          'name' => ['required', 'min:3'],
-          'email' => ['required', 'email', Rule::unique('users', 'email')],
-          'password' => ['required', 'alpha_num:ascii' ,'min:6', 'max:50'],
-        ]);
+        $formFields = $request->validated();
 
         $formFields['password'] = bcrypt($formFields['password']);
 
