@@ -5,7 +5,6 @@
         <div>
           <a href="/" class="text-orange-400 hover:text-orange-300 font-bold">E shop</a>
         </div>
-        <div v-if="$page.props.alert.message" class="text-orange-400 font-bold">{{ $page.props.alert.message }}</div>
         <div>
           <div class="flex flex-row items-center">
             <div v-if="$page.props.user.name" class="text-orange-400 pr-4">You're logged in as {{ $page.props.user.name }}</div>
