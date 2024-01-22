@@ -1,34 +1,26 @@
 <template>
-    <a :href="href" :class="classes" v-if="as === 'href'">
+    <Link :href="href" :class="classes" v-if="as === 'href'">
         <slot></slot>
-    </a>
+    </Link>
     <button :class="classes" v-else>
         <slot></slot>
     </button>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-import { Link } from '@inertiajs/vue3';
 
-    export default defineComponent({
-        components: {
-            Link,
-        },
+<script setup>
+    import { Link } from '@inertiajs/vue3';
+    import { computed } from 'vue';
 
-        props: [
-            'active', 
-            'href',
-            'as',
-        ],
+    defineProps({
+        href: String,
+        as: String,
+    })
 
-        computed: {
-            classes() {
-                return `justify-center inline-flex items-center px-4 py-2 
+    const classes = computed(() => {
+        return `justify-center inline-flex items-center px-4 py-2 
                 border border-transparent rounded-md tracking-widest transition bg-orange-400 text-zinc-800
                 hover:text-zinc-500`
-            }
-        }
     })
 
 </script>

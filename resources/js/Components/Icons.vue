@@ -41,13 +41,12 @@
 
 </template>
 
-<script>
-    import { defineComponent } from "vue";
-    
-    export default defineComponent({
-        props: [
-            'name',
-            'link',
-        ],
-    });
+
+<script setup>
+
+    defineProps({
+        name: String,
+        link: String,
+    })
+
 </script>

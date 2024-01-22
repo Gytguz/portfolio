@@ -12,24 +12,15 @@
                 </div>
             </div>
     </div>
-
-
-
 </template>
   
   
-<script>
-import { defineComponent } from 'vue';
-import { Link } from '@inertiajs/vue3';
+<script setup>
+    import { Link } from '@inertiajs/vue3';
 
-export default defineComponent({
-    props: {
+    defineProps({
         products: Array,
         customClasses: String,
-    },
+    })
 
-    components: {
-            Link
-    },
-});
 </script>

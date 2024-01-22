@@ -9,21 +9,14 @@
     </app-layout>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-import AppLayout from '@/Layouts/AppLayout.vue';
-import HeroComponent from '@/Components/HeroComponent.vue';
-import ProductCardComponent from '@/Components/ProductCardComponent.vue';
+<script setup>
+    import AppLayout from '@/Layouts/AppLayout.vue';
+    import HeroComponent from '@/Components/HeroComponent.vue';
+    import ProductCardComponent from '@/Components/ProductCardComponent.vue';
 
-export default defineComponent({
-    props: {
+    defineProps({
         products: Array,
         categories: Array,
-    },
-    components: {
-    AppLayout,
-    HeroComponent,
-    ProductCardComponent
-},
-});
+    })
+
 </script>
