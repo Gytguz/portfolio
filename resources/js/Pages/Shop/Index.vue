@@ -12,7 +12,7 @@
                 class="w-full text-xs py-4 justify-center inline-flex items-center px-2 
                 border border-transparent rounded-md tracking-widest transition bg-orange-400 text-zinc-800
                 hover:text-zinc-500"
-                :class="route().current('shopPage', { category: category.slug }) ? 'text-orange-200 bg-zinc-800' : 'text-zinc-800'"
+                :class="route().current('shopPage', { category: category.slug }) ? 'text-orange-100 bg-zinc-800' : 'text-zinc-800'"
                 v-for="(category, id) in categories" :key="id">
                     {{ category.name }}
                 </Link>
@@ -28,27 +28,17 @@
     </app-layout>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-import { Link } from '@inertiajs/vue3';
-import AppLayout from '@/Layouts/AppLayout.vue';
-import ProductCardComponent from '@/Components/ProductCardComponent.vue';
-import Icons from '@/Components/Icons.vue';
-import HeaderBotComponent from '@/Components/HeaderBotComponent.vue';
+<script setup>
+    import { Link } from '@inertiajs/vue3';
+    import AppLayout from '@/Layouts/AppLayout.vue';
+    import ProductCardComponent from '@/Components/ProductCardComponent.vue';
+    import Icons from '@/Components/Icons.vue';
+    import HeaderBotComponent from '@/Components/HeaderBotComponent.vue';
 
-
-export default defineComponent({
-    props: {
+    defineProps({
         products: Array,
         categories: Array,
         selectedCategory: String,
-    },
-        components: {
-            AppLayout,
-            ProductCardComponent,
-            Icons,
-            Link,
-            HeaderBotComponent
-        },
-});
+    })
+
 </script>
