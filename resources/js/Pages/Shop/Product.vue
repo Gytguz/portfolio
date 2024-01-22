@@ -91,45 +91,34 @@
     </app-layout>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-import { Link } from '@inertiajs/vue3';
-import AppLayout from '@/Layouts/AppLayout.vue';
-import Icons from '@/Components/Icons.vue';
-import HeaderBotComponent from '@/Components/HeaderBotComponent.vue';
-import ProductCardComponent from '@/Components/ProductCardComponent.vue';
 
+<script setup>
+    import { ref } from 'vue';
+    import { useForm } from '@inertiajs/vue3'
+    import AppLayout from '@/Layouts/AppLayout.vue';
+    import Icons from '@/Components/Icons.vue';
+    import HeaderBotComponent from '@/Components/HeaderBotComponent.vue';
+    import ProductCardComponent from '@/Components/ProductCardComponent.vue';
 
-
-export default defineComponent({
-    props: {
+    const props = defineProps({
         product: Object,
         categories: Array,
         similarProducts: Array,
-    },
-        components: {
-            AppLayout,
-            Icons,
-            Link,
-            HeaderBotComponent,
-            ProductCardComponent,
-        },
+    })
 
-    data() {
-        return {
-            quantity: 1,
-            form: this.$inertia.form({
-                id: this.product.id,
-                name: this.product.name,
-                price: this.product.price,
-                product_code: this.product.product_code,
-                details: this.product.details,
-                image: this.product.image,
-                slug: this.product.slug,
-                quantity: 1,
-            })
-        }
-    },
+    const quantity = ref({
+        quantity: 1,
+    });
 
-});
+    const form = useForm({
+        id: props.product.id,
+        name: props.product.name,
+        price: props.product.price,
+        product_code: props.product.product_code,
+        details: props.product.details,
+        image: props.product.image,
+        slug: props.product.slug,
+        quantity: 1,
+    })
+
 </script>

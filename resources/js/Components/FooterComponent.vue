@@ -6,21 +6,15 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-import quotes from '@/quotes'
 
-export default defineComponent({
-    data() {
-        return {
-            quotes: quotes,
-    };
-  },
-    computed: {
-        randomQuote() {
-            return this.quotes[Math.floor(Math.random() * this.quotes.length)];
-        }
-    }
-});
+<script setup>
+  import { ref, computed } from 'vue';
+  import quotes from '@/quotes';
+
+  const quotesList = ref(quotes);
+
+  const randomQuote = computed(() => {
+    return quotesList.value[Math.floor(Math.random() * quotesList.value.length)];
+  });
 
 </script>

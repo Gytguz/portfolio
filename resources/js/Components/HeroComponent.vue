@@ -10,21 +10,14 @@
       </div>
     </div>
   </template>
-  
-  <script>
-  import { defineComponent } from 'vue';
-  import ButtonComponent from './Buttons/ButtonComponent.vue';
-  
-  export default defineComponent({
-  
-    props: {
-        categories: Array,
-    },
-  
-    components: {
-        ButtonComponent,
-    },
 
-  });
-  </script>
+
+<script setup>
+import ButtonComponent from './Buttons/ButtonComponent.vue';
+
+  defineProps({
+    categories: Array,
+  })
+
+</script>
   

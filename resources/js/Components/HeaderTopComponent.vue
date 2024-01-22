@@ -26,14 +26,8 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-import Icons from '@/Components/Icons.vue';
+<script setup>
+    import Icons from '@/Components/Icons.vue';
 
-export default defineComponent({
-    components: {
-        Icons,
-    }
-});
 
 </script>
