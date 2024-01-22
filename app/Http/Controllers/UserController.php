@@ -43,13 +43,13 @@ class UserController extends Controller
       if(auth()->attempt($formFields)){
         $request->session()->regenerate();
         
-        return to_route('homePage');
+        return to_route('homePage')->with('message', 'Logged in successfully');
       }
      }
 
      public function logout() {
         auth()->logout();
-        return to_route('test');
+        return to_route('homePage')->with('message', 'Logged out successfully');
      }
 
      public function test() {

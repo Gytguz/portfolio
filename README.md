@@ -2,7 +2,7 @@
 
 ## About This Project
 
-Simple eCommerce site.
+Simple eCommerce site. Please note that this is an ongoing project and it's yet to be finished. Some functionallity is still missing and I'm still working on it.
 
 ## Stack Being Used
 
