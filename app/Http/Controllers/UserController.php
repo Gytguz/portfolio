@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\RegisterRequest;
 
 
 
@@ -56,5 +57,10 @@ class UserController extends Controller
         $user = auth()->user();
         return $user;
      }
+
+
+     public function dashboardPage() {
+        return Inertia::render('User/Dashboard');
+      }
 
 }

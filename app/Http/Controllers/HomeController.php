@@ -19,6 +19,6 @@ class HomeController extends Controller
     }
 
     public function contactPage() {
-        return view('pages.contact');
+        return Inertia::render('User/Contact');
     }
 }

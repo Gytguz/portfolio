@@ -58,7 +58,7 @@ defineProps({errors: Object})
   const submit = async () => {
         if (form.password !== form.confirmPassword) {
             return;
-            }
+        }
         await router.post('/users/register', form)
     };
 
