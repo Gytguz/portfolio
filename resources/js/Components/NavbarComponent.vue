@@ -28,7 +28,7 @@
       ]
 
   let burgerDataAuth = [
-        {title:"Dashboard", link:"/test"},
+        {title:"Dashboard", link:"/dashboard"},
         {title:"Logout", link:"/users/logout"},
         {title:"Shop", link:"/shop"},
       ]
