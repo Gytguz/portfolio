@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Inertia\Inertia;
+use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\RegisterRequest;
@@ -31,8 +32,7 @@ class UserController extends Controller
     }
 
     public function loginPage() {
-      return Inertia::render('User/Login', [
-        ]);
+      return Inertia::render('User/Login');
      }
 
      public function authenticate(Request $request){
@@ -44,7 +44,7 @@ class UserController extends Controller
       if(auth()->attempt($formFields)){
         $request->session()->regenerate();
         
-        return to_route('homePage')->with('message', 'Logged in successfully');
+        return to_route('dashboardPage')->with('message', 'Logged in successfully');
       }
      }
 
