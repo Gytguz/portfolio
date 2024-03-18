@@ -15,7 +15,7 @@
                       </div>
                       <div>
                           <label for="email" class="block mb-2 text-sm font-medium text-orange-400">Your email</label>
-                          <input type="email" name="email" id="email" v-model="form.email" autocomplete="new-password" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-zinc-700 border-gray-600 placeholder-orange-200 text-orange-400 focus:ring-blue-500 focus:border-blue-500" placeholder="name@example.com" required="">
+                          <input type="email" name="email" id="email" v-model="form.email" autocomplete="new-password" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-zinc-700 border-gray-600 placeholder-orange-200 text-orange-400 focus:ring-blue-500 focus:border-blue-500" placeholder="name@email.com" required="">
                           <label v-if="errors.email" class="text-sm text-red-500"> {{ errors.email }} </label>
                       </div>
                       <div>

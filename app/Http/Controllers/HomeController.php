@@ -17,8 +17,4 @@ class HomeController extends Controller
             'categories' => $categories,
         ]);
     }
-
-    public function contactPage() {
-        return Inertia::render('User/Contact');
-    }
 }

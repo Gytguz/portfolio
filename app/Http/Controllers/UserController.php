@@ -21,13 +21,10 @@ class UserController extends Controller
     public function registerStore(RegisterRequest $request)
     {
         $formFields = $request->validated();
-
         $formFields['password'] = bcrypt($formFields['password']);
-
         $user = User::create($formFields);
-
+        
         auth()->login($user);
-
         return to_route('homePage');
     }
 
