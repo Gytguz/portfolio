@@ -9,7 +9,7 @@ Simple eCommerce site. Please note that this is an ongoing project and it's yet 
 - **Laravel 10.x** - backend 
 - **Inertia (Vue3)** - frontend
 - **Tailwind** - css
-- **Mailtrap** - mailing
+- **Mailgun** - mailing
 - **Laravel Cashier** - php side of payments
 - **Stripe** - frontend side of paymets
 - **Laravel Invoices** - invoices

@@ -11,7 +11,9 @@ class Categories extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'slug', 'product_code'
+        'name', 
+        'slug', 
+        'product_code'
     ];
 
     public function products():BelongsToMany {

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContactController;
 
 
 // // Guest Routes
@@ -18,7 +19,9 @@ use App\Http\Controllers\UserController;
     Route::post('/users/register', [UserController::class, 'registerStore'])->name('registerStore');
     Route::post('/users/authenticate', [UserController::class, 'authenticate'])->name('authenticate');
     Route::get('/users/logout', [UserController::class, 'logout'])->name('logout');
-    Route::get('/contact', [HomeController::class, 'contactPage'])->name('contactPage');
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+    Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+
     
     Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [UserController::class, 'dashboardPage'])->name('dashboardPage');
