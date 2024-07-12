@@ -14,6 +14,7 @@
     import HeroComponent from '@/Components/HeroComponent.vue';
     import ProductCardComponent from '@/Components/ProductCardComponent.vue';
 
+
     defineProps({
         products: Array,
         categories: Array,

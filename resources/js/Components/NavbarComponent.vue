@@ -20,7 +20,7 @@
 
 <script setup>
   import BurgerComponent from '@/Components/BurgerComponent.vue';
-  
+
   let burgerDataGuest = [
         {title:"Register", link:"/register"},
         {title:"Login", link:"/login"},
