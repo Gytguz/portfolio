@@ -22,9 +22,9 @@ use App\Http\Controllers\ContactController;
     Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
     Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
 
-    
+
     Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [UserController::class, 'dashboardPage'])->name('dashboardPage');
     });
-    
+
 // });

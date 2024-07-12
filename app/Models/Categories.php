@@ -11,8 +11,8 @@ class Categories extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 
-        'slug', 
+        'name',
+        'slug',
         'product_code'
     ];
 
